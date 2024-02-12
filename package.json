@@ -1,0 +1,41 @@
+{
+  "name": "order",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "gulp",
+    "dev": "cross-env PRODUCTION=development gulp",
+    "server": "cross-env PRODUCTION=development TUNNEL=run gulp",
+    "build": "gulp build"
+  },
+  "keywords": [],
+  "author": "alexander ivanov",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/stream": "^3.0.1",
+    "browser-sync": "^3.0.2",
+    "cross-env": "^7.0.3",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "localtunnel": "^2.0.2",
+    "panini": "^1.7.2",
+    "sass": "^1.69.7",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "focus-visible": "^5.2.0",
+    "lodash.debounce": "^4.0.8",
+    "modern-normalize": "^2.0.0",
+    "swiper": "^11.0.5"
+  }
+}

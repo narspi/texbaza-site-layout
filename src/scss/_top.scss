@@ -1,0 +1,99 @@
+.top {
+  background-color: $light-black;
+  color: #fff;
+
+  background-image: url("../img/top-decor-big.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom 30px right;
+  background-size: 100% auto;
+
+  padding-top: 67px;
+  padding-bottom: 50px;
+
+  &__descr {
+    font-family: "Radiotechnika", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 40px 0 23px;
+  }
+
+  &__form {
+    max-width: 400px;
+  }
+
+  &__form-descr {
+    margin: 0 0 35px;
+  }
+
+  &__form-row {
+    display: flex;
+    margin-bottom: 11px;
+    gap: 10px;
+  }
+
+  &__form-input {
+    display: block;
+    min-width: 0;
+    width: unset;
+    min-height: 45px;
+    &--3 {
+      flex: 156;
+    }
+
+    &--7 {
+      flex: 227;
+    }
+  }
+
+  &__form-btn {
+    flex: 156;
+
+    &:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+  }
+
+  &__form-policy {
+    margin: 20px 0 0;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    color: #fff;
+    font-size: 10px;
+
+    & span {
+      opacity: 0.5;
+      vertical-align: middle;
+    }
+
+    & input {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 2px;
+      accent-color: #9dddff;
+      -webkit-text-fill-color: #fff;
+
+      &:focus {
+        outline: 1px solid #fff;
+        outline-offset: 1px;
+      }
+    }
+  }
+
+  &__brands {
+    width: fit-content;
+    padding-left: 0;
+    margin: 50px 0 0 auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 135px;
+
+    & a:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+  }
+}
