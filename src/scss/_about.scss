@@ -1,0 +1,170 @@
+.about {
+  &__background {
+    background-color: $light-black;
+    box-shadow: 0px -2px 0px 2px $light-black;
+    color: #fff;
+    border-radius: 0px 0px 40px 40px;
+    padding-top: 16px;
+    padding-bottom: 116px;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 0 76px 0;
+    font-family: "Radiotechnika", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #fff;
+    gap: 15px;
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    max-width: 1245px;
+    margin: 0 auto 113px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    justify-content: space-between;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    &::before {
+      content: "";
+      display: block;
+      width: 150px;
+      max-width: 100%;
+      aspect-ratio: 1 / 1;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      margin-bottom: 15px;
+    }
+
+    &:nth-child(1)::before {
+      background-image: url("../img/about/about-list-1.png");
+    }
+
+    &:nth-child(2)::before {
+      background-image: url("../img/about/about-list-2.png");
+    }
+
+    &:nth-child(3)::before {
+      background-image: url("../img/about/about-list-3.png");
+    }
+  }
+
+  &__list-title {
+    color: $light-blue;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    min-height: 2.4em;
+  }
+
+  &__list-descr {
+    color: #f2f2f2;
+    font-weight: 300;
+    line-height: 1.4;
+    margin: 20px 0px 0px 0px;
+  }
+
+  &__slogan {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  &__brands {
+    margin: 46px auto 0 auto;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1399px;
+  }
+
+  &__brands-item {
+    display: flex;
+    & .about__brands-link {
+      margin: 0 16px;
+    }
+
+    &::before {
+      content: "/";
+    }
+
+    &:first-child .about__brands-link {
+      margin: 0px 16px 0px 0px;
+    }
+
+    &:last-child .about__brands-link {
+      margin: 0px 0px 0px 16px;
+    }
+
+    &:first-child::before {
+      display: none;
+    }
+  }
+
+  &__brands-link {
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline-offset: 2px;
+      outline: 2px solid #fff;
+    }
+  }
+
+  &__desktop {
+    padding-bottom: 56px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 38% 25% 1fr;
+    gap: 5%;
+    padding: 63px 0 80px;
+  }
+
+  &__col {
+    min-width: 0;
+    color: $dark-medium;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 300;
+
+    & > * {
+      margin: 0;
+    }
+
+    & > p {
+      text-align: justify;
+    }
+
+    & img {
+      max-width: 100%;
+      border-radius: 11px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  &__brands-images {
+    margin-bottom: 53px;
+  }
+}

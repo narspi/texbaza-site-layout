@@ -2,13 +2,27 @@
   background-color: $light-black;
   color: #fff;
 
-  background-image: url("../img/top-decor-big.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom 30px right;
-  background-size: 100% auto;
+  &__wrapper {
+    background-image: url("../img/top-decor-big.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom 30px right;
+    background-size: 100% auto;
+    padding-top: 67px;
+    padding-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
 
-  padding-top: 67px;
-  padding-bottom: 50px;
+  &__wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 20px;
+    height: 100%;
+    background-image: linear-gradient(to left, $light-black, transparent);
+    // box-shadow: 0 0 5px 10px $light-black;
+  }
 
   &__descr {
     font-family: "Radiotechnika", sans-serif;
@@ -47,6 +61,23 @@
 
   &__form-btn {
     flex: 156;
+    line-height: 24px;
+    text-transform: uppercase;
+    background-color: $form-btn-top;
+    color: #fff;
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    padding: 7px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms background-color;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $dark-blue;
+    }
 
     &:focus-visible {
       outline: 2px solid #fff;
@@ -75,7 +106,7 @@
       accent-color: #9dddff;
       -webkit-text-fill-color: #fff;
 
-      &:focus {
+      &:focus-visible {
         outline: 1px solid #fff;
         outline-offset: 1px;
       }
@@ -89,11 +120,24 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 135px;
+    gap: min(135px, 10vw);
+  }
 
-    & a:focus-visible {
+  &__brands-link,
+  &__brands-img {
+    display: block;
+  }
+
+  &__brands-link {
+    transition: transform 100ms;
+
+    &:focus-visible {
       outline: 2px solid #fff;
       outline-offset: 2px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
     }
   }
 }

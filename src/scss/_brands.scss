@@ -1,0 +1,49 @@
+.brands {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    display: block;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: var(--image);
+      opacity: 0;
+      transition: opacity 300ms;
+    }
+
+    &:hover::before,
+    &:focus-visible::before {
+      opacity: 1;
+    }
+
+    &:focus-visible {
+      outline-offset: 2px;
+      outline: 2px solid $light-black;
+    }
+  }
+
+  &__img {
+    display: block;
+    transition: opacity 300ms;
+  }
+
+  &__link:hover &__img,
+  &__link:focus-visible &__img {
+    opacity: 0;
+  }
+}

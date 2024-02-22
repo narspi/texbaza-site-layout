@@ -10,34 +10,19 @@
       <div class="w-full">
         <div class="w-full row-center">
           <a href="/" class="header__logo">
-            <img src="/img/logo.svg" alt="logo" />
+            <img src="/img/logo.svg" alt="logo">
           </a>
-          <a href="/catalog" class="header__catalog-link">Каталог</a>
-          <button
-            class="header__catalog-burger"
-            aria-label="Кнопка каталога"
-            title="Открыть каталог"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="29"
-              viewBox="0 0 28 29"
-              fill="none"
-            >
+          <a href="/catalog.html" class="header__catalog-link">Каталог</a>
+          <button class="header__catalog-burger" aria-label="Кнопка каталога" title="Открыть каталог">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
               <path d="M2 13.5H26V15.5H2V13.5Z" fill="#2D9FD3" />
               <path d="M2 7.5H26V9.5H2V7.5Z" fill="#2D9FD3" />
               <path d="M2 19.5H26V21.5H2V19.5Z" fill="#2D9FD3" />
             </svg>
           </button>
           <form class="header__form">
-            <input
-              type="search"
-              name="s"
-              placeholder="Поиск"
-              class="header__search"
-            />
-            <button class="header__form-close" type="reset">x</button>
+            <input type="search" name="s" placeholder="Поиск" class="header__search">
+            <button class="header__form-close" type="reset" aria-label="Очистить форму" title="Очистить форму"></button>
           </form>
         </div>
         <nav class="header__nav">
@@ -72,33 +57,9 @@
       <div class="header__contacts">
         <a class="header__email" href="mailto:pe@texbaza.com">pe@texbaza.com</a>
         <a class="header__tel" href="tel:+74959236636">+7(495) 923 66 36</a>
-        <ul class="header__social">
-          <li class="header__social-item">
-            <a href="/" class="header-socail__elem">
-              <img src="/img/icons/ya-dzen.svg" alt="social" />
-            </a>
-          </li>
-          <li class="header__social-item">
-            <a href="/" class="header-socail__elem">
-              <img src="/img/icons/youtube.svg" alt="social" />
-            </a>
-          </li>
-          <li class="header__social-item">
-            <a href="#" class="header-socail__elem">
-              <img src="/img/icons/telegram.svg" alt="social" />
-            </a>
-          </li>
-          <li class="header__social-item">
-            <a href="#" class="header-socail__elem">
-              <img src="/img/icons/vk.svg" alt="social" />
-            </a>
-          </li>
-          <li class="header__social-item">
-            <a href="#" class="header-socail__elem">
-              <img src="/img/icons/whatsup.svg" alt="social" />
-            </a>
-          </li>
-        </ul>
+        <div class="header__social">
+          {{> social}}
+        </div>
       </div>
     </div>
   </div>

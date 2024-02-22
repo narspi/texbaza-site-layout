@@ -1,0 +1,71 @@
+<section class="news">
+  <div class="container">
+    <div class="news__top">
+      <h2 class="news__title">
+        <span>Новости</span> <span class="news__title--blue">Компании</span>
+      </h2>
+      <div class="news__nav">
+        <button class="news__nav-prev">
+          <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M0.718525 6.67331L6.59499 0.761215C6.96881 0.384941 7.57488 0.384941 7.94851 0.761216C8.32218 1.13716 8.32218 1.74689 7.94851 2.1228L2.74875 7.35411L7.94836 12.5852C8.32202 12.9613 8.32202 13.571 7.94836 13.9469C7.5747 14.323 6.96865 14.323 6.59484 13.9469L0.718373 8.03475C0.531542 7.84669 0.438232 7.60047 0.438232 7.35414C0.438232 7.10768 0.531724 6.86128 0.718525 6.67331Z"
+              fill="#262626" />
+          </svg>
+        </button>
+        <button class="news__nav-next">
+          <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.28147 8.0347L2.40501 13.9468C2.03119 14.3231 1.42512 14.3231 1.05149 13.9468C0.677822 13.5708 0.677822 12.9611 1.05149 12.5852L6.25125 7.3539L1.05164 2.12278C0.677975 1.74669 0.677976 1.13701 1.05164 0.761073C1.4253 0.384981 2.03135 0.384981 2.40516 0.761073L8.28163 6.67326C8.46846 6.86132 8.56177 7.10754 8.56177 7.35387C8.56177 7.60033 8.46828 7.84673 8.28147 8.0347Z"
+              fill="white" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="swiper news__slider">
+      <div class="swiper-wrapper">
+        <article  class="swiper-slide news__elem">
+          <img src="/img/news/news1.jpg" class="news__elem-img" alt="news 1">
+          <div class="news__elem-body">
+            <h3 class="news__elem-title">
+              Колесные экскаваторы Beezone по сниженной цене на ТЕХБАЗА
+            </h3>
+            <p class="news__descr">
+              Еще одно специальное предложение от ТЕХБАЗА в этом декабре-
+              предновогодняя акция на 16-тонные колесные экскаваторы...
+            </p>
+            <time datetime="2018-07-07" class="news__elem-time">04.12.2023</time>
+            <a href="#" class="btn-blue news__elem-btn">Подробнее</a>
+          </div>
+        </article>
+        <article class="swiper-slide news__elem">
+          <img src="/img/news/news2.jpg" class="news__elem-img" alt="news 1">
+          <div class="news__elem-body">
+            <h3 class="news__elem-title">
+              ТЕХБАЗА — работа по территории всей РФ
+            </h3>
+            <p class="news__descr">
+              ТЕХБАЗА работает по всем регионам России и осуществляет полный
+              логистический сервис по доставке спецтехники по запросу клиента.
+            </p>
+            <time datetime="2018-07-07" class="news__elem-time">04.12.2023</time>
+            <a href="#" class="btn-blue news__elem-btn">Подробнее</a>
+          </div>
+        </article>
+        {{# repeat 5}}
+        <article class="swiper-slide news__elem">
+          <img src="/img/news/news3.jpg" class="news__elem-img" alt="news 1">
+          <div class="news__elem-body">
+            <h3 class="news__elem-title">Новогодняя акция от ТЕХБАЗА и XGMA</h3>
+            <p class="news__descr">
+              Уникальное предложение от XGMA и официального дистрибьютора
+              спецтехники ТЕХБАЗА- только в декабре действуют .
+            </p>
+            <time datetime="2018-07-07" class="news__elem-time">04.12.2023</time>
+            <a href="#" class="btn-blue news__elem-btn">Подробнее</a>
+          </div>
+        </article>
+        {{/ repeat}}
+      </div>
+    </div>
+  </div>
+</section>

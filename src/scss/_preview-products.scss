@@ -1,0 +1,151 @@
+.preview-products {
+  padding-top: 50px;
+  padding-bottom: 106px;
+  &__title {
+    margin: 0px 0px 95px 0px;
+    font-family: "Radiotechnika", sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    text-align: center;
+  }
+
+  &__cat-title {
+    font-size: 48px;
+    font-family: "Radiotechnika", sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 0 70px;
+    display: flex;
+    flex-direction: column;
+
+    & span:last-child {
+      display: flex;
+      align-items: flex-end;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $light-blue;
+        margin: 0px 0px 10px 34px;
+      }
+    }
+  }
+
+  &__cat {
+    margin-bottom: 100px;
+  }
+
+  &__elems {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+    margin-bottom: 100px;
+  }
+
+  &__elem {
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #edf2f4;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    aspect-ratio: 733 / 350;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__elem-title {
+    font-family: "Radiotechnika", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 23px 0 20px;
+  }
+
+  &__table {
+    margin-bottom: 15px;
+  }
+
+  &__table-body {
+    display: grid;
+    gap: 15px;
+  }
+
+  &__table-row {
+    display: flex;
+  }
+
+  &__table-td {
+    font-size: 20px;
+    &--last {
+      font-weight: 700;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    gap: 30px;
+    margin-top: auto;
+  }
+
+  &__elem-btn {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    padding: 23px 30px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: $light-blue;
+    flex-grow: 1;
+    transition: 300ms background-color;
+
+    &:focus-visible {
+      outline-offset: 2px;
+      outline: 2px solid $light-blue;
+    }
+
+    &:hover {
+      background-color: $transparent-blue;
+    }
+
+    &--dark {
+      background-color: $light-black;
+
+      &:hover {
+        background-color: $transparent-black;
+      }
+
+      &:focus-visible {
+        outline-offset: 2px;
+        outline: 2px solid $light-black;
+      }
+    }
+  }
+
+  &__brands {
+    max-width: 1355px;
+    margin: 0 auto 100px;
+  }
+}
+
+@supports (grid-template-columns: subgrid) {
+  .preview-products {
+    &__elem {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: auto / span 4;
+      gap: 0;
+    }
+  }
+}

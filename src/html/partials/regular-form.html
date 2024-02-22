@@ -1,0 +1,14 @@
+<form class="regular-form">
+  <div class="regular-form__body">
+    <input class="regular-form__input {{#ifequal blue 'true'}}regular-form__input--blue{{/ifequal}}" type="text"
+      placeholder="Имя">
+    <input class="regular-form__input regular-form__tel {{#ifequal blue 'true'}}regular-form__input--blue{{/ifequal}}"
+      type="tel" placeholder="Телефон">
+    <button class="regular-form__submit" type="submit">Отправить</button>
+  </div>
+  <label class="regular-form__approve">
+    <input class="regular-form__checkbox {{#ifequal blue 'true'}}regular-form__checkbox--blue{{/ifequal}}"
+      type="checkbox"><span class="regular-form__approve-text">Нажимая кнопку «Отправить», Вы соглашаетесь с
+      <a class="regular-form__approve-link" href="#">политикой конфиденциальности и правилами обработки персональных данных</a></span>
+  </label>
+</form>

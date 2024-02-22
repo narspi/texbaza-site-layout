@@ -34,9 +34,14 @@ input::placeholder {
   font-size: 12px;
 }
 
-input:focus {
+input:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
+}
+
+.wrapper-section {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .container {
@@ -63,17 +68,72 @@ input:focus {
   align-items: center;
 }
 
+.content-center {
+  display: flex;
+  justify-content: center;
+}
+
+.w-min-reset {
+  min-width: 0;
+}
+
 .btn-blue {
-  font-weight: 600;
-  line-height: 24px;
+  display: block;
   text-transform: uppercase;
-  background-color: #9dddff;
+  background-color: $light-blue;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  border-radius: 6px;
+  padding: 23px 30px;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 300ms background-color;
+  min-width: 270px;
+
+  &:hover {
+    background-color: $dark-blue;
+  }
+
+  &:focus-visible {
+    outline-offset: 2px;
+    outline: 2px solid $light-blue;
+  }
+}
+
+.btn-dark {
+  display: block;
+  min-width: 270px;
+  border: none;
+  border-radius: 6px;
+  padding: 23px 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  background-color: $light-black;
   color: #fff;
   text-align: center;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 600;
-  padding: 7px;
-  border-radius: 7px;
-  border: none;
-  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 300ms background-color;
+
+  &:hover {
+    background-color: $transparent-black;
+  }
+
+  &:focus-visible {
+    outline-offset: 2px;
+    outline: 2px solid $light-black;
+  }
+}
+
+.title-small {
+  font-family: "Radiotechnika", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
 }

@@ -10,7 +10,8 @@ import source from "vinyl-source-stream";
 import buffer from "vinyl-buffer";
 import rollupStream from "@rollup/stream";
 import terser from "@rollup/plugin-terser";
-import { nodeResolve } from '@rollup/plugin-node-resolve';
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from '@rollup/plugin-commonjs';
 
 const isDevelopment = process.env.PRODUCTION === "development";
 const isTunnel = process.env.TUNNEL === "run";
@@ -50,11 +51,11 @@ const createCss = () => {
         outputStyle: "expanded",
       })
     )
-    .pipe(
-      cleanCSS({
-        format: "beautify",
-      })
-    )
+    // .pipe(
+    //   cleanCSS({
+    //     format: "beautify",
+    //   })
+    // )
     .pipe(gulpif(isDevelopment, sourcemaps.write()))
     .pipe(dest("dist/css"))
     .pipe(sync.stream());
@@ -86,7 +87,7 @@ const createJs = () => {
 
   return rollupStream({
     input: "./src/js/main.js",
-    output: { format: "cjs" },
+    output: { format: "iife", },
     plugins: [
       terser({
         mangle: false, // Отключаем манглирование
@@ -95,14 +96,18 @@ const createJs = () => {
           comments: true, // Сохраняем комментарии
         },
       }),
-      nodeResolve()
+      nodeResolve({
+        browser: true,
+      }),
+      commonjs()
     ],
   })
     .pipe(source("bundle.js"))
     .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest("./dist/js"));
+    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(sourcemaps.write("."))
+    .pipe(dest("./dist/js"))
+    .pipe(sync.stream());
 };
 
 const transportFonts = () => {

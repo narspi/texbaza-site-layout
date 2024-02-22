@@ -1,0 +1,119 @@
+.contacts {
+  padding-top: 60px;
+  padding-bottom: 87px;
+
+  &__grid {
+    display: grid;
+    gap: 80px;
+  }
+  &__title {
+    margin: 0;
+    text-align: center;
+  }
+
+  &__elem {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__elem-data {
+    width: 447px;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    gap: 28px;
+  }
+
+  &__elem-map {
+    display: block;
+    flex-grow: 1;
+    position: relative;
+
+    &::before {
+      content: "Посмотреть на яндекс карте";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(255, 255, 255, 0.791);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 24px;
+      color: $light-black;
+      opacity: 0;
+      transition: opacity 300ms;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 2px solid $dark-blue;
+      outline-offset: 2px;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__elem-img {
+    display: block;
+    width: 100%;
+  }
+
+  &__elem-address {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    gap: 28px;
+  }
+
+  &__elem-title,
+  &__elem-tel,
+  &__elem-email,
+  &__elem-link {
+    margin: 0;
+    font-size: 24px;
+    margin: 0;
+    line-height: 1;
+    font-style: normal;
+    color: $light-black;
+  }
+
+  &__elem-title {
+    font-weight: 400;
+  }
+
+  &__elem-link {
+    text-decoration: none;
+    &:hover {
+      color: $dark-blue;
+    }
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid $dark-blue;
+    }
+  }
+
+  &__elem-address,
+  &__elem-tel,
+  &__elem-email {
+    font-weight: 700;
+  }
+
+  &__elem-tel,
+  &__elem-email {
+    text-transform: uppercase;
+    text-underline-offset: 3px;
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid $dark-blue;
+    }
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
+}

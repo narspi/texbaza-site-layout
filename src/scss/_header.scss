@@ -64,6 +64,10 @@
     color: #faf6f2;
     text-decoration: none;
     margin: 0px 8px 0 48px;
+
+    &:hover {
+      color: $burger-color;
+    }
   }
 
   &__catalog-link:focus-visible {
@@ -91,16 +95,26 @@
     width: 100%;
     max-width: 700px;
     position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 11px;
+      width: 28px;
+      height: 28px;
+      background-image: url("../img/icons/search.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      pointer-events: none;
+    }
   }
 
   &__search {
-    padding: 10px 16px 10px 48px;
+    padding: 10px 40px 10px 48px;
     border: none;
     background-color: $light-black;
-    background-image: url("../img/icons/search.svg");
-    background-repeat: no-repeat;
-    background-size: 28px 28px;
-    background-position: 11px 8px;
     color: #fff;
     font-size: 16px;
     line-height: 1.5;
@@ -133,12 +147,27 @@
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
-    // display: none;
+    display: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    background-image: url("../img/icons/close-search-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 
-  // &__form-submit {
-  //   display: none;
-  // }
+  &__search:-webkit-autofill + &__form-close,
+  &__search:not(:placeholder-shown) + &__form-close {
+    display: block;
+  }
+
+  &__form-close:focus-visible {
+    outline-offset: 2px;
+    outline: 1px solid #fff;
+  }
 
   &__nav {
     margin-top: 24px;
@@ -158,7 +187,7 @@
       text-decoration: none;
 
       &:hover {
-        text-decoration: underline;
+        color: $dark-blue;
       }
 
       &:focus-visible {
@@ -215,26 +244,18 @@
 
   &__email:hover,
   &__tel:hover {
-    text-decoration: underline;
+    color: $dark-blue;
+  }
+
+  &__email:hover::before {
+    background-image: url("../img/icons/email-blue.svg");
+  }
+
+  &__tel:hover::before {
+    background-image: url("../img/icons/tel-blue.svg");
   }
 
   &__social {
     padding-left: 5px;
-    list-style: none;
-    margin: 0;
-    display: flex;
-    gap: 10px;
-  }
-
-  &__social a {
-    display: block;
-
-    &:focus-visible {
-      outline: 1px solid #fff;
-    }
-  }
-
-  &__social img {
-    display: block;
   }
 }
