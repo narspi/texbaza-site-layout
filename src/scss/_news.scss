@@ -15,37 +15,6 @@
     margin-top: 40px;
   }
 
-  &__nav-prev,
-  &__nav-next {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 55px;
-    height: 55px;
-    border-radius: 6px;
-    border: none;
-  }
-
-  &__nav-prev {
-    background-color: #fff;
-
-    &:focus-visible,
-    &:hover {
-      outline-offset: 2px;
-      outline: 2px solid #fff;
-    }
-  }
-
-  &__nav-next {
-    background-color: $light-blue;
-
-    &:focus-visible,
-    &:hover {
-      outline-offset: 2px;
-      outline: 2px solid $light-blue;
-    }
-  }
-
   &__title {
     font-size: 64px;
     color: #fff;

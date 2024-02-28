@@ -1,0 +1,25 @@
+---
+layout: default
+title: Каталог секция
+---
+
+<div class="bg-gray catalog">
+    <div class="container">
+        <h1 class="title catalog__title">Фронтальные погрузчики</h1>
+        {{> breadcrumbs }}
+        <div class="catalog__list">
+            {{#repeat 25}}
+            {{> product}}
+            {{/repeat}}
+        </div>
+        <div class="catalog__bottom">
+            <div class="title-small catalog__bottom-title">Другие бренды</div>
+            <div class="catalog__bottom-brands">
+                {{> brands}}
+            </div>
+            <div class="content-center">
+                <button class="btn-dark">Показать еще</button>
+            </div>
+        </div>
+    </div>
+</div>

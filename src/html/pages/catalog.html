@@ -2,9 +2,66 @@
 layout: default
 title: Каталог
 ---
-<div class="container">
-    <h1>Каталог</h1>
-    <div>
-        {{> regular-form blue="true"}}
+<div class="bg-gray catalog">
+    <div class="container">
+        <h1 class="title catalog__title">Каталог</h1>
+        {{> breadcrumbs }}
+        <div class="catalog__filter">
+            <ul class="catalog__brands">
+                <li class="catalog__brands-elem">
+                    <a class="catalog__brands-link" href="#">
+                        <img class="catalog__brands-img" src="./img/brands-list/item-hover1.png" alt="some brand">
+                    </a>
+                </li>
+                <li class="catalog__brands-elem">
+                    <a class="catalog__brands-link" href="#">
+                        <img class="catalog__brands-img" src="./img/brands-list/item-hover5.png" alt="some brand">
+                    </a>
+                </li>
+                <li class="catalog__brands-elem">
+                    <a class="catalog__brands-link" href="#">
+                        <img class="catalog__brands-img" src="./img/brands-list/item-hover2.png" alt="some brand">
+                    </a>
+                </li>
+                <li class="catalog__brands-elem">
+                    <a class="catalog__brands-link" href="#">
+                        <img class="catalog__brands-img" src="./img/brands-list/item-hover3.png" alt="some brand">
+                    </a>
+                </li>
+                <li class="catalog__brands-elem">
+                    <a class="catalog__brands-link" href="#">
+                        <img class="catalog__brands-img" src="./img/brands-list/item-hover4.png" alt="some brand">
+                    </a>
+                </li>
+            </ul>
+            <div class="catalog__controls">
+                <p class="catalog__controls-descr">Быстрый подбор техники</p>
+                <div class="catalog__range" id="catalog__range"></div>
+                <div class="">
+                    <select class="catalog__controls-select" id="techview">
+                        <option value>Вид</option>
+                        <option value="foo">Бульдозеры</option>
+                        <option value="buz">Грейдеры</option>
+                    </select>
+                </div>
+
+  
+                <!-- <select id="branches">
+                    <option value>Отрасль</option>
+                    <option value="foo">Агротехника</option>
+                    <option value="buz">Горная карьерная промышленность</option>
+                </select> -->
+            </div>
+        </div>
+        <section class="catalog__sections">
+            {{> section-products id="1" title-one="Фронтальные" title-two="погрузчики"}}
+            {{> section-products id="2" title-one="Экскаватор"}}
+            {{> section-products id="3" title-one="Грейдеры"}}
+            {{> section-products id="4" title-one="Мини-" title-two="экскаваторы"}}
+            {{> section-products id="5" title-one="Мини-" title-two="погрузчики"}}
+            {{> section-products id="6" title-one="Дорожные" title-two="катки"}}
+            {{> section-products id="7" title-one="Дорожные" title-two="катки"}}
+        </section>
+        {{> compilations}}
     </div>
 </div>

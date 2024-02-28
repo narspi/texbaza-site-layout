@@ -34,9 +34,11 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
+    "custom-select": "^1.1.15",
     "focus-visible": "^5.2.0",
     "lodash.debounce": "^4.0.8",
     "modern-normalize": "^2.0.0",
+    "nouislider": "^15.7.1",
     "swiper": "^11.0.5"
   }
 }

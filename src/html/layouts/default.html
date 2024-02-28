@@ -7,9 +7,13 @@
     <title>{{ title }}</title>
   </head>
   <body>
-    {{> header }} 
-    {{> body }} 
-    {{> footer}}  
+    <div class="wrapper">
+      {{> header }}
+      <div class="wrapper__body">
+        {{> body }} 
+      </div>
+      {{> footer}}  
+    </div>
     <script src="./js/bundle.js"></script>
   </body>
 </html>

@@ -40,6 +40,7 @@
   &__img {
     display: block;
     transition: opacity 300ms;
+    max-width: 120px;
   }
 
   &__link:hover &__img,

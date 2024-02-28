@@ -1,11 +1,12 @@
 .top {
   background-color: $light-black;
   color: #fff;
+  min-width: 0;
 
   &__wrapper {
     background-image: url("../img/top-decor-big.jpg");
     background-repeat: no-repeat;
-    background-position: bottom 30px right;
+    background-position: bottom right -10px;
     background-size: 100% auto;
     padding-top: 67px;
     padding-bottom: 20px;
