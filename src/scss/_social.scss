@@ -12,12 +12,13 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    background-image: var(--icon-decor);
     &:focus-visible {
       outline: 1px solid #fff;
     }
 
     &:hover {
-      transform: scale(1.1);
+      background-image: var(--icon-hover);
     }
   }
 }

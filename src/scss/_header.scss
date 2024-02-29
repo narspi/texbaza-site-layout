@@ -1,6 +1,6 @@
 .header {
   // position: sticky;
-  // z-index: 1;
+  // z-index: 2;
   // top: 0;
 
   &__top {
@@ -233,7 +233,7 @@
     background-position: center;
     width: 20px;
     height: 16px;
-    background-image: url("../img/icons/email.svg");
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='17' viewBox='0 0 21 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.5 3.73391L10.7343 8.99822L10.3135 9.2835L9.89264 8.99822L1.5 3.3089V15H18.5V3.73391ZM2.24241 2L10.3135 7.47133L18.3845 2H2.24241ZM0 0.5H1.5H18.5H20V2V2.61367L20.048 2.68451L20 2.71707V15V16.5H18.5H1.5H0V15V2V0.5Z' fill='%23FAF6F2'/%3E%3C/svg%3E ");
   }
 
   &__tel::before {
@@ -243,7 +243,7 @@
     background-position: center;
     width: 19px;
     height: 19px;
-    background-image: url("../img/icons/tel.svg");
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 3.37753L4.30288 1.00627C4.30288 1.00627 4.39654 0.906274 5.00967 1.50499C5.6228 2.10371 7.73825 4.86252 7.73825 4.86252L7.01421 7.88282L12.633 13.4993L15.6524 12.7763L18.9923 15.2441L19.5089 16.2115L17.1375 19.5142L13.5132 19.4803L1.03389 7.00169L1 3.37753Z' stroke='%23FAF6F2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
   }
 
   &__email:hover,
@@ -252,11 +252,11 @@
   }
 
   &__email:hover::before {
-    background-image: url("../img/icons/email-blue.svg");
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='17' viewBox='0 0 21 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.5 3.73391L10.7343 8.99822L10.3135 9.2835L9.89264 8.99822L1.5 3.3089V15H18.5V3.73391ZM2.24241 2L10.3135 7.47133L18.3845 2H2.24241ZM0 0.5H1.5H18.5H20V2V2.61367L20.048 2.68451L20 2.71707V15V16.5H18.5H1.5H0V15V2V0.5Z' fill='%230e8dd1'/%3E%3C/svg%3E ");
   }
 
   &__tel:hover::before {
-    background-image: url("../img/icons/tel-blue.svg");
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 3.37753L4.30288 1.00627C4.30288 1.00627 4.39654 0.906274 5.00967 1.50499C5.6228 2.10371 7.73825 4.86252 7.73825 4.86252L7.01421 7.88282L12.633 13.4993L15.6524 12.7763L18.9923 15.2441L19.5089 16.2115L17.1375 19.5142L13.5132 19.4803L1.03389 7.00169L1 3.37753Z' stroke='%230e8dd1' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E ");
   }
 
   &__social {

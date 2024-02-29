@@ -36,24 +36,26 @@ title: Каталог
             </ul>
             <div class="catalog__controls">
                 <p class="catalog__controls-descr">Быстрый подбор техники</p>
+                <p class="catalog__controls-row">
+                    <span>Цена:</span>
+                    <span>3М</span>
+                </p>
                 <div class="catalog__range" id="catalog__range"></div>
-                <div class="">
+                <div class="catalog__controls-row">
                     <select class="catalog__controls-select" id="techview">
                         <option value>Вид</option>
                         <option value="foo">Бульдозеры</option>
                         <option value="buz">Грейдеры</option>
                     </select>
+                    <select class="catalog__controls-select" id="branches">
+                        <option value>Отрасль</option>
+                        <option value="foo">Агротехника</option>
+                        <option value="buz">Горная карьерная промышленность</option>
+                    </select>
                 </div>
-
-  
-                <!-- <select id="branches">
-                    <option value>Отрасль</option>
-                    <option value="foo">Агротехника</option>
-                    <option value="buz">Горная карьерная промышленность</option>
-                </select> -->
             </div>
         </div>
-        <section class="catalog__sections">
+        <div class="catalog__sections">
             {{> section-products id="1" title-one="Фронтальные" title-two="погрузчики"}}
             {{> section-products id="2" title-one="Экскаватор"}}
             {{> section-products id="3" title-one="Грейдеры"}}
@@ -61,7 +63,7 @@ title: Каталог
             {{> section-products id="5" title-one="Мини-" title-two="погрузчики"}}
             {{> section-products id="6" title-one="Дорожные" title-two="катки"}}
             {{> section-products id="7" title-one="Дорожные" title-two="катки"}}
-        </section>
+        </div>
         {{> compilations}}
     </div>
 </div>

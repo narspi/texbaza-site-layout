@@ -31,7 +31,7 @@ if (valuesSlider && techview) {
   };
 
   noUiSlider.create(valuesSlider, {
-    start: [1, 32],
+    start: [5, 32],
     range: { min: 0, max: valuesForSlider.length - 1 },
     connect: true,
     step: 1,
@@ -40,5 +40,5 @@ if (valuesSlider && techview) {
   });
 
   const techviewValue = customSelect(techview);
-  // const branchesValue = customSelect(branches);
+  const branchesValue = customSelect(branches);
 }
