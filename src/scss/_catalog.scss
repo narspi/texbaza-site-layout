@@ -276,7 +276,6 @@
     color: #fff;
     font-size: 48px;
     font-family: "Roboto", sans-serif;
-    min-height: 2.6em;
     pointer-events: none;
   }
 
@@ -289,17 +288,5 @@
 
   &__bottom {
     padding-bottom: 20px;
-  }
-
-  &__bottom-brands {
-    border-radius: 20px;
-    padding: 26px 30px;
-    margin: 60px auto;
-    max-width: 1355px;
-  }
-
-  &__bottom-title {
-    margin: 0 auto;
-    text-align: center;
   }
 }

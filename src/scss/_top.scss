@@ -101,15 +101,21 @@
     & input {
       width: 10px;
       height: 10px;
+      padding: 0;
+      border-radius: 2px;
+      appearance: none;
       display: inline-block;
       vertical-align: middle;
       margin-right: 2px;
-      accent-color: #9dddff;
-      -webkit-text-fill-color: #fff;
 
-      &:focus-visible {
+      &:focus-visible,
+      &:hover {
         outline: 1px solid #fff;
         outline-offset: 1px;
+      }
+
+      &:checked {
+        background-color: $light-blue;
       }
     }
   }

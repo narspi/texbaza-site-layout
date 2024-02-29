@@ -1,0 +1,30 @@
+.product-partners {
+  &__title {
+    margin: 0 0 27px;
+  }
+
+  &__list {
+    @include list-reset;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__descr {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__name {
+    margin-top: 28px;
+  }
+}

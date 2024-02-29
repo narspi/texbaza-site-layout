@@ -185,11 +185,20 @@ input:focus-visible {
 }
 
 .nav-next {
-  background-color: $light-blue;
+  background-color: $light-black;
 
   &:focus-visible,
   &:hover {
     outline-offset: 2px;
-    outline: 2px solid $light-blue;
+    outline: 2px solid $light-black;
+  }
+
+  &--blue {
+    background-color: $light-blue;
+    &:focus-visible,
+    &:hover {
+      outline-offset: 2px;
+      outline: 2px solid $light-blue;
+    }
   }
 }

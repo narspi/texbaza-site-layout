@@ -1,0 +1,25 @@
+.product-lizing {
+  margin-bottom: 75px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 26px;
+  }
+  &__title {
+    margin: 0;
+    display: flex;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 14px;
+    margin-top: 100px;
+  }
+
+  &__title-elem {
+    &--right {
+      margin-top: 64px;
+      margin-left: -60px;
+    }
+  }
+}
