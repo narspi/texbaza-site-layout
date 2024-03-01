@@ -21,5 +21,14 @@
               </button>
         </div>
     </div>
-
+    <div class="swiper product-lizing__slider">
+      <div class="swiper-wrapper">
+        {{#repeat 4}}
+        <a class="swiper-slide product-lizing__slide" href="#" class="swiper-slide">
+          <img class="product-lizing__img" src="./img/lizing-banner.jpg" alt="lizing link" loading="lazy">
+          <span class="swiper-lazy-preloader"></span>
+        </a>
+        {{/repeat}}
+      </div>
+    </div>
 </section>

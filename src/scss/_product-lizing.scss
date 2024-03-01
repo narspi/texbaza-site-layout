@@ -10,16 +10,50 @@
     display: flex;
   }
 
+  &__title-elem {
+    &--right {
+      margin-top: 70px;
+      margin-left: -200px;
+    }
+  }
+
   &__nav {
     display: flex;
     gap: 14px;
     margin-top: 100px;
   }
 
-  &__title-elem {
-    &--right {
-      margin-top: 64px;
-      margin-left: -60px;
+  &__nav-prev,
+  &__nav-next {
+    opacity: 0;
+  }
+
+  &__nav-prev.btn-init,
+  &__nav-next.btn-init {
+    opacity: 1;
+  }
+
+  &__slider {
+    margin-top: 29px;
+  }
+
+  &__slider:not(.swiper-initialized) &__slide {
+    flex-shrink: 0;
+    display: block;
+    width: 100%;
+  }
+
+  &__slide {
+    display: block;
+    --swiper-preloader-color: #{$light-black};
+    min-height: 200px;
+    &:focus-visible {
+      outline-offset: -3px;
+      outline: 3px solid $light-blue;
     }
+  }
+
+  &__img {
+    width: 100%;
   }
 }

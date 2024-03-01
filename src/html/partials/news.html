@@ -24,7 +24,11 @@
     <div class="swiper news__slider">
       <div class="swiper-wrapper">
         <article  class="swiper-slide news__elem">
-          <img src="/img/news/news1.jpg" class="news__elem-img" alt="news 1">
+          <div class="news__elem-preview">
+            <img src="/img/news/news1.jpg" class="news__elem-img" alt="news 1" loading="lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
+          
           <div class="news__elem-body">
             <h3 class="news__elem-title">
               Колесные экскаваторы Beezone по сниженной цене на ТЕХБАЗА
@@ -38,7 +42,10 @@
           </div>
         </article>
         <article class="swiper-slide news__elem">
-          <img src="/img/news/news2.jpg" class="news__elem-img" alt="news 1">
+          <div class="news__elem-preview">
+            <img src="/img/news/news2.jpg" class="news__elem-img" alt="news 1" loading="lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
           <div class="news__elem-body">
             <h3 class="news__elem-title">
               ТЕХБАЗА — работа по территории всей РФ
@@ -53,7 +60,10 @@
         </article>
         {{# repeat 5}}
         <article class="swiper-slide news__elem">
-          <img src="/img/news/news3.jpg" class="news__elem-img" alt="news 1">
+          <div class="news__elem-preview">
+            <img src="/img/news/news3.jpg" class="news__elem-img" alt="news 1" loading="lazy">
+            <div class="swiper-lazy-preloader"></div>
+          </div>
           <div class="news__elem-body">
             <h3 class="news__elem-title">Новогодняя акция от ТЕХБАЗА и XGMA</h3>
             <p class="news__descr">

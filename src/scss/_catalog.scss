@@ -136,9 +136,23 @@
     width: 100%;
   }
 
+  &__sections {
+    min-width: 0;
+    min-height: 0;
+  }
+
+  &__section {
+    min-width: 0;
+
+    & * {
+      min-width: 0;
+      min-height: 0;
+    }
+  }
+
   &__section-top {
     display: flex;
-    gap: 15xp;
+    gap: 15px;
     justify-content: space-between;
     align-items: start;
   }
@@ -171,11 +185,11 @@
   }
 
   &__section-nav :is(.nav-prev, .nav-next) {
-    opacity: 0;
+    visibility: hidden;
   }
 
   &__section-nav .btn-init {
-    opacity: 1;
+    visibility: visible;
   }
 
   &__section-slider {
